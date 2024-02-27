@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Page 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Kumbh Sans", sans-serif;
+        font-weight: 400;
+      }
+      .bg-main {
+        background: radial-gradient(
+          217.52% 152.49% at 100% 0%,
+          #fff 0%,
+          #f7faff 46.48%,
+          #80abff 100%
+        );
+      }
+      .font16_24 {
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+      }
+      .font26_48 {
+        font-size: 1.625rem;
+        font-size: clamp(1.625rem, 1.35rem + 1.375vw, 3rem);
+      }
+      .font16_28 {
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.85rem + 0.75vw, 1.75rem);
+      }
+      .font24_32 {
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+      }
+      input::placeholder {
+        font-size: 14px;
+        color: #000;
+        opacity: 0.25;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-main pt-[26px] md:pt-[55px] pb-[50px] md:pb-[70px]">
+      <div class="container mx-auto px-5 md:px-0">
+        <div class="flex items-center justify-end">
+          <p class="text-[#000573] font-semibold font16_24 pr-3 md:pr-4">PL</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 33 17"
+            fill="none"
+            class="w-[21px] h-[10px] md:w-[33px] md:h-[17px]"
+          >
+            <line
+              x1="1.5"
+              y1="-1.5"
+              x2="20.3995"
+              y2="-1.5"
+              transform="matrix(-0.743294 0.668965 0.668965 0.743294 32.5557 2)"
+              stroke="#000573"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <line
+              x1="2.11839"
+              y1="1.88851"
+              x2="16.1663"
+              y2="14.5316"
+              stroke="#000573"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <img
+            src="/assets/tick.png"
+            alt="download"
+            class="w-[160px] h-[160px] md:w-[240px] md:h-[240px] mt-[37px] mb-[30px] md:mb-[50px]"
+          />
+          <h2
+            class="text-[#000573] font24_32 mb-[20px] md:mb-[50px] text-center"
+          >
+            Aktywuj swoje konto Kod powinien dotrzeć w<br />ciągu najbliższych
+            <span class="font-bold">60</span>
+            sekund.
+          </h2>
+          <div class="flex justify-center items-center text-center">
+            <div
+              class="rounded-l-[12px] flex justify-center items-center text-center h-14 w-12 border border-[#3E77D5]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <rect width="24" height="24" />
+                <path
+                  d="M10.5 6H13.5M16.286 3H7.714C6.768 3 6 3.806 6 4.8V19.2C6 20.194 6.768 21 7.714 21H16.286C17.233 21 18 20.194 18 19.2V4.8C18 3.806 17.233 3 16.286 3Z"
+                  stroke="#3E77D5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <input
+              class="border border-[#3E77D5] border-l-0 rounded-r-[12px] pl-3 h-14 w-60 bg-transparent text-sm"
+              type="text"
+              placeholder="OTP"
+              id="inputField"
+              name="inputField"
+            />
+          </div>
+          <div
+            class="pt-3 pb-3 text-red flex text-center justify-center"
+            id="errorMessage"
+          ></div>
+
+          <button
+            class="rounded-[12px] bg-[#94B9FF] h-14 w-72 flex justify-center items-center text-center font-bold"
+            id="redirectButton"
+            type="submit"
+            value="redirect"
+            onclick="return validateInput()"
+          >
+            KONTYNUOWAĆ
+          </button>
+          <button class="text-black text-sm mt-[15px]">Zły numer?</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#000E28] text-center pt-[25px] pb-[14px]">
+      <div class="container mx-auto px-4 md:px-0">
+        <p class="text-white text-xs pb-[14px]">
+          Traffic Lynx Ltd<br />Aktywuj dostęp do:<br />WORKOUTNOW<br />za 10
+          zł<br /><br />Oplata będzie pobierana co tydzeń<br />Usługę możesz
+          dezaktywować poprzez: STOP WORK na 80708 (Orange) lub 80425 (T-Mobile
+          / Plus).<br /><br />Opłata zostanie doliczona do Twojego rachunku u
+          twojego operatora (telefon na abonament) lub odliczona od środków na
+          koncie (telefon na kartę).<br />Wprowadż swój numer telefonu:<br /><br />Przygotuj
+          telefon, za chwilę otrzymasz wiadomość z kodem PIN, którym
+          zatwierdzisz zamówienie.
+        </p>
+        <div class="flex items-center justify-center gap-[52px]">
+          <span class="text-xs text-white">REGULAMIN</span>
+          <span class="text-xs text-white">POLITYKA PRYWATNOŚCI</span>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("redirectButton")
+        .addEventListener("click", validateInput);
+    });
+
+    function validateInput() {
+      let input = document.getElementById("inputField").value.trim();
+      let errorMessageElement = document.getElementById("errorMessage");
+      if (input === "") {
+        errorMessageElement.textContent =
+          "Please Enter your Phone Number to proceed.";
+      } else if (isNaN(input)) {
+        errorMessageElement.textContent =
+          "Enter your phone number in correct format";
+      } else {
+        errorMessageElement.textContent = "";
+        redirect();
+      }
+    }
+
+    function redirect() {
+      window.location.href = "second.html";
+    }
+  </script>
+</html>
